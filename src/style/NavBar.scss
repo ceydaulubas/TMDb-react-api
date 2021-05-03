@@ -1,26 +1,71 @@
-.color-nav{
-background-color: #0d253f;
+$main-color: #0d253f;
+$circle-color :rgb(0, 153, 255);
 
 
-}
-.navbar1{
-    padding-left: 10%;
-}
-.navbar2{
-    padding-right: 10%;
-}
+.navbar{
+  background-color: $main-color;
 
-.x{
+  .logo {
     width: 154px;
     height: 20px;
+  }
+
+  .navbar1 {
+    padding-left: 10%;
+  }
+
+  .navbar2 {
+  padding-right: 13%;
+
+  .navbarText {
+    border: solid white 1px;
+    border-radius: 4px;
+    height: 27px;
+    width: 28px;
+    margin-top: 8%;
+    margin-right: 8%;
+    margin-left: 2%;
+    padding-top: 5px;
+    font-size: 12px ;
+    text-align: center;
+    &:visited{
+        background-color: $main-color;
+    }
+    &:focus {     
+        background-color:white;
+        p{
+            color: black;    
+    }
+}
+   p{
+      color: white;
+      margin:-3px;
+      text-align: center;
+      
+    }
+  }
+
+  .nameCircle{
+    border: solid $circle-color 2px;
+    background-color: $circle-color ;
+    border-radius: 50%;
+    height: 30px;
+    width: 60px;
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: 8%;
+    p{
+        color:white;
+        font-size:small;
+        text-align: center;
+        margin-top: -80%;
+    }
+  }
+  .notificationIcon{
+    margin-top: 8%;
+  }
+}
 }
 
-.circle {
-    height: 30px;
-    width: 30px;
-    background-color: #01b4e4;
-    border-radius: 50%;
-    color: white;
-    text-align: center;
-    margin-top:10%
-  }
+
+
