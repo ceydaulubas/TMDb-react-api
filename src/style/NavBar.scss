@@ -1,6 +1,11 @@
 $main-color: #0d253f;
 $circle-color: rgb(0, 153, 255);
 
+.margin{
+  margin-right: 4%;
+  margin-left: 4%;
+}
+
 .navbar {
   background-color: $main-color;
   color: white;
@@ -11,20 +16,19 @@ $circle-color: rgb(0, 153, 255);
   }
 
   .navbar1 {
-    padding-left: 10%;
+    padding-left: 13%;
   }
 
   .navbar2 {
-    padding-right: 13%;
+    padding-right: 16%;
 
     .navbarText {
+      @extend.margin;
       border: solid white 1px;
       border-radius: 4px;
       height: 2%;
-      width: 15%;
+      width: 10%;
       margin-top: 6.5%;
-      margin-right: 8%;
-      margin-left: 2%;
       font-size: 12px;
       text-align: center;
       &:visited {
@@ -49,14 +53,13 @@ $circle-color: rgb(0, 153, 255);
     }
 
     .nameCircle {
+      @extend.margin;
       border: solid $circle-color 2px;
       background-color: $circle-color;
       border-radius: 50%;
       height: 30px;
       width: 60px;
       margin-top: 7%;
-      margin-left: 8%;
-      margin-right: 8%;
 
       @media (max-width: 991px) {
         margin: 0 1%;
