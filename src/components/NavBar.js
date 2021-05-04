@@ -1,26 +1,25 @@
 import React from 'react'
 import '../style/NavBar.scss'
 
-import { Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar} from 'react-bootstrap';
 import { IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 
-const styleForPageLink ={
-    color: 'white' ,
+const styleForPageLink = {
+    color: 'white',
     'font-weight': 'bold'
 }
 
-const searhicon ={
+const searhicon = {
     color: '#01b4e4',
-    'font-size': '30px'    
+    'font-size': '30px'
 }
 
 const NavBar = () => {
     return (
-
-        <Navbar className="navbar">
+        <Navbar collapseOnSelect expand="lg" className="navbar">
             <Navbar.Brand href="/" className="navbar1">
                 <img
                     className="logo"
@@ -28,20 +27,23 @@ const NavBar = () => {
                     alt="The Movie Database (TMDb)"
                 />
             </Navbar.Brand>
-            <Nav className="mr-auto" >
-                <Nav.Link href="/filmler" style={styleForPageLink}>Filmler</Nav.Link>
-                <Nav.Link href="/diziler" style={styleForPageLink}>Diziler</Nav.Link>
-                <Nav.Link href="/kisiler" style={styleForPageLink}>Kisiler</Nav.Link>
-                <Nav.Link href="/daha-fazla" style={styleForPageLink}>Daha Fazla</Nav.Link>
-            </Nav>
-            <Nav className="navbar2">
-                <Nav.Link ><IconButton><AddIcon style={{ color: "white" }} /></IconButton></Nav.Link>
-                <Nav.Link className="navbarText" href="/"><p>TR</p></Nav.Link>
-                <IconButton className="notificationsIcon"><NotificationsIcon style={{ color: "white" }} /></IconButton>
-                <Nav.Link className="nameCircle"><p>C</p></Nav.Link>
-                <IconButton className="notificationsIcon"><SearchIcon className= "notificationIcon" style={searhicon} /></IconButton>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                    <Nav.Link href="/filmler" style={styleForPageLink}>Filmler</Nav.Link>
+                    <Nav.Link href="/diziler" style={styleForPageLink}>Diziler</Nav.Link>
+                    <Nav.Link href="/kisiler" style={styleForPageLink}>Kişiler</Nav.Link>
+                    <Nav.Link href="/daha-fazla" style={styleForPageLink}>Daha Fazla</Nav.Link>
+                </Nav>
 
-            </Nav>
+                <Nav className="navbar2">
+                    <Nav.Link ><IconButton><AddIcon style={{ color: "white" }} /></IconButton></Nav.Link>
+                    <Nav.Link className="navbarText" href="/"><p>TR</p></Nav.Link>
+                    <Nav.Link ><IconButton ><NotificationsIcon style={{ color: "white" }} /></IconButton></Nav.Link>
+                    <Nav.Link className="nameCircle" href="/"><p>C</p></Nav.Link>
+                    <Nav.Link ><IconButton><SearchIcon style={searhicon} /></IconButton></Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
         </Navbar>
 
     )
