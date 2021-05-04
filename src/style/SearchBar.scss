@@ -1,69 +1,96 @@
-.searchpage {
-  background: url("https://image.tmdb.org/t/p/original/3lwf8ps2MKa4ECBihjE91W6pjUd.jpg")
-    no-repeat ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: calc(100vh / 2.5);
-  margin-left: 10%;
-  margin-right: 10%;
+$firstButtonLogo-color: #90cea1;
+$secondButtonLogo-color: #01b4e4;
 
-  .welcome {
-    margin-left: 2.5%;
-    padding-top: 5%;
-    color: white;
-    h2 {
-      font-size: 3vw;
-      font-weight: bold;
-    }
-    h3 {
-      font-size: 1.8vw;
-    }
+.coverimage {
+  height: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
-    @media (max-width: 991px) {
+  .searchpage {
+    background: url("https://m.media-amazon.com/images/M/MV5BZWU3ODA4MmYtZTViNC00MWE4LTg1ZTktNTUzNTJiZTNlY2UxXkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_.jpg")
+      no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% auto;
+    height: calc(100vh / 2.5);
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 1400px;
+    width: 100%;
+
+    .welcome {
+      margin-left: 2.5%;
+      padding-top: 5%;
+      color: white;
       h2 {
-        font-size: 32px;
+        font-size: 3vw;
+        font-weight: bold;
       }
       h3 {
-        font-size: 20px;
+        font-size: 1.8vw;
       }
-    }
-    @media (max-width: 709px) {
+
+      @media (max-width: 991px) {
+        h2 {
+          font-size: 32px;
+        }
+        h3 {
+          font-size: 20px;
+        }
+      }
+      @media (max-width: 709px) {
         h3 {
           font-size: 2.5vw;
         }
       }
-  }
-
-  .container {
-    display: flex;
-    width: 90%;
-    justify-content: center;
-    align-items: center;
-    margin: 5% 7%;
-
-    background-color: white;
-    border-radius: 30px;
-    border: none;
-    height: 46px;
-    padding: 0;
-
-    input {
-      padding: 10px 20px;
-      flex-grow: 1;
-      background-color: transparent;
-      outline: none;
-      border: none;
-      margin-right: 8px;
     }
-    button {
-      height: 46px;
-      width: 94px;
-      background-image: linear-gradient(to right, #90cea1, #01b4e4);
-      color: white;
-      border-style: none;
+
+    .container {
+      display: flex;
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+      margin: 5% 3%;
+      background-color: white;
       border-radius: 30px;
+      border: none;
+      height: 46px;
+      padding: 0;
+
+      @media (max-width: 709px) {
+        height: 36px;
+      }
+
+      input {
+        padding: 10px 20px;
+        flex-grow: 1;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-right: 8px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+      button {
+        height: 46px;
+        width: 94px;
+        background-image: linear-gradient(
+          to right,
+          $firstButtonLogo-color,
+          $secondButtonLogo-color
+        );
+        color: white;
+        border-style: none;
+        border-radius: 30px;
+
+        @media (max-width: 709px) {
+          height: 36px;
+          width: 74px;
+        }
+      }
     }
   }
 }

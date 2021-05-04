@@ -20,8 +20,8 @@ const SearchBar = ({ addSearchInput }) => {
 
     };
         return (
-
-<div className="searchpage">
+<div className="coverimage">
+    <div className="searchpage">
     <div className="welcome">
         <h2>Hoşgeldiniz.</h2>
         <h3>Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.</h3>
@@ -39,6 +39,8 @@ const SearchBar = ({ addSearchInput }) => {
           </form>
           </div>
 </div>
+</div>
+
 
         );
     }
