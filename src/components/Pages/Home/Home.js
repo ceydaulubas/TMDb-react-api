@@ -2,10 +2,12 @@ import React, {useState, useEffect } from 'react';
 import axios from 'axios';
 
 import SearchBar from './SearchBar';
+import PopularMovie from './PopularMovie';
 
 const Home = (props) => {
     const [searchBarInput, setSearchBarInput] = useState("");
-    const [trendmovieListResults, setTrendmovieListResults] = useState([]);
+    const [popularMovieListResults, setPopularMovieListResults] = useState([]);
+    const [freeToWatchmovieListResults, setFreeToWatchmovieListResults] = useState([]);
     const [selectedMovie, setSelectedMovie] = useState({});
 
 
@@ -16,13 +18,13 @@ const Home = (props) => {
         // const searchInput = searchBarInput ? searchBarInput : 'love';
 
         axios
-            .get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`)
-            .then((trendmovieResults) => setTrendmovieListResults(trendmovieResults.data.results))
-            .catch((error) => console.error(`Someting went wrong: ${error} in trend movie part`));
+            .get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+            .then((popularMovieResults) => setPopularMovieListResults(popularMovieResults.data.results))
+            .catch((error) => console.error(`Someting went wrong: ${error} in popular movie part`));
 
     };
 
-    useEffect(handleSearchForMovie, [searchBarInput]);
+    useEffect(handleSearchForMovie, [searchBarInput],);
 
     const handleAddSearchBar = (searchInput) =>
     setSearchBarInput(searchInput);
@@ -30,7 +32,11 @@ const Home = (props) => {
     return (
         <div>
             <SearchBar addSearchInput={handleAddSearchBar} />
-
+            {(popularMovieListResults.length === 0) ? (
+                    null
+                ) :
+            <PopularMovie popularMovieListResults={popularMovieListResults}/>
+            }
         </div>
     )
 

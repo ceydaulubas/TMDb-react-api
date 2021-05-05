@@ -9,12 +9,12 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const styleForPageLink = {
     color: 'white',
-    'font-weight': 'bold'
+    'fontWeight': 'bold'
 }
 
 const searhicon = {
     color: '#01b4e4',
-    'font-size': '30px'
+    'fontSize': '30px'
 }
 
 const NavBar = () => {
