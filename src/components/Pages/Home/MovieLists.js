@@ -39,6 +39,33 @@ const PopularMovie = (props) => {
                 </Carousel>
             </div>
 
+
+            <div className="title">
+                <h2> En cok Oy alanlar</h2>
+            </div>
+
+            <div>
+                <Carousel itemsToShow={5}>
+                    {props.topRatedMovieListResults.map((movie, id) => (
+                        <div key={movie.id}>
+                            <div className="body">
+                                <div><IconButton><MoreHorizIcon /></IconButton></div>
+                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovie-image" />
+                                <div>89% </div>
+
+                                <div className="con">
+                                    <h4>{movie.title}</h4>
+                                    <h6>{movie.release_date}</h6>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    ))}
+                </Carousel>
+            </div>
+
+
         </div>
     )
 }
