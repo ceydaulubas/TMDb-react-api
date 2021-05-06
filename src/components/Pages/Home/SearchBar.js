@@ -19,30 +19,36 @@ const SearchBar = ({ addSearchInput }) => {
         setSearchState(initialState);
 
     };
-        return (
-<div className="coverimage">
-    <div className="searchpage">
-    <div className="welcome">
-        <h2>Hoşgeldiniz.</h2>
-        <h3>Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.</h3>
-    </div>
-    <div >
-        <form onSubmit={handleFormSubmit} className="container">
-            <input
-              type="text"
-              name="search"
-              placeholder="Film,dizi,kisi ara..."
-              value={searchState.userInput}
-              onChange={handleInputChange}
-            />
-            <button type="submit">Search</button>
-          </form>
-          </div>
-</div>
-</div>
 
 
-        );
-    }
+    return (
+        <div className="coverimage">
+            <div className="searchpage">
+                <div className="welcome">
+                    <h2>Welcome.</h2>
+                    <h3>Millions of movies, TV shows and people to discover. Explore now.</h3>
+                </div>
+                <div >
+                    <form onSubmit={handleFormSubmit} className="container">
 
-    export default SearchBar;
+                        <input
+                            type="text"
+                            name="search"
+                            placeholder="Search for a movie, tv show, person......"
+                            value={searchState.userInput}
+                            onChange={handleInputChange}
+                        />
+                        <button type="submit">Search</button>
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+    );
+}
+
+export default SearchBar;

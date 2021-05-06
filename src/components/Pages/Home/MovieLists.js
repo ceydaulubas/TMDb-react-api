@@ -9,13 +9,13 @@ import { IconButton } from '@material-ui/core';
 
 
 
-const PopularMovie = (props) => {
+const PopularMovie = (props, detailOfMovie) => {
 
     return (
         <div className="mainLayout">
 
             <div className="title">
-                <h2> Popüler Olanlar</h2>
+                <h2> What's Popular</h2>
             </div>
 
             <div>
@@ -24,7 +24,7 @@ const PopularMovie = (props) => {
                         <div key={movie.id}>
                             <div className="body">
                                 <div><IconButton><MoreHorizIcon /></IconButton></div>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovie-image" />
+                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovieImage" />
                                 <div>89% </div>
 
                                 <div className="con">
@@ -41,7 +41,7 @@ const PopularMovie = (props) => {
 
 
             <div className="title">
-                <h2> En cok Oy alanlar</h2>
+                <h2> Top Rated</h2>
             </div>
 
             <div>
@@ -50,7 +50,7 @@ const PopularMovie = (props) => {
                         <div key={movie.id}>
                             <div className="body">
                                 <div><IconButton><MoreHorizIcon /></IconButton></div>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovie-image" />
+                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovieImage" />
                                 <div>89% </div>
 
                                 <div className="con">

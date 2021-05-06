@@ -3,10 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './components/NavBar';
 import Home from './components/Pages/Home/Home';
-import Filmler from './components/Pages/Filmler';
-import Diziler from './components/Pages/Diziler';
-import Kisiler from './components/Pages/Kisiler';
-import DahaFazla from './components/Pages/DahaFazla';
+import Movies from './components/Pages/Movies';
+import TVshows from './components/Pages/TVshows';
+import People from './components/Pages/People';
+import More from './components/Pages/More';
 
 const App = () => {
   return (
@@ -15,10 +15,10 @@ const App = () => {
 
      <Switch>
           <Route exact path='/' component={Home}/>
-          <Route path='/filmler' component={Filmler}/>
-          <Route path='/diziler' component={Diziler}/>
-          <Route path='/kisiler' component={Kisiler}/>
-          <Route path='/daha-fazla' component={DahaFazla}/>
+          <Route path='/movies' component={Movies}/>
+          <Route path='/tvshows' component={TVshows}/>
+          <Route path='/people' component={People}/>
+          <Route path='/more' component={More }/>
 
         </Switch>
 

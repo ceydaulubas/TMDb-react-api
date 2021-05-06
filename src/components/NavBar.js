@@ -30,15 +30,15 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/filmler" style={styleForPageLink}>Filmler</Nav.Link>
-                    <Nav.Link href="/diziler" style={styleForPageLink}>Diziler</Nav.Link>
-                    <Nav.Link href="/kisiler" style={styleForPageLink}>Kişiler</Nav.Link>
-                    <Nav.Link href="/daha-fazla" style={styleForPageLink}>Daha Fazla</Nav.Link>
+                    <Nav.Link href="/filmler" style={styleForPageLink}>Movies</Nav.Link>
+                    <Nav.Link href="/diziler" style={styleForPageLink}>TV Shows</Nav.Link>
+                    <Nav.Link href="/kisiler" style={styleForPageLink}>People</Nav.Link>
+                    <Nav.Link href="/daha-fazla" style={styleForPageLink}>More</Nav.Link>
                 </Nav>
 
                 <Nav className="navbar2">
                     <Nav.Link ><IconButton><AddIcon style={{ color: "white" }} /></IconButton></Nav.Link>
-                    <Nav.Link className="navbarText" href="/"><p>TR</p></Nav.Link>
+                    <Nav.Link className="navbarText" href="/"><p>EN</p></Nav.Link>
                     <Nav.Link ><IconButton ><NotificationsIcon style={{ color: "white" }} /></IconButton></Nav.Link>
                     <Nav.Link className="nameCircle" href="/"><p>C</p></Nav.Link>
                     <Nav.Link ><IconButton><SearchIcon style={searhicon} /></IconButton></Nav.Link>
