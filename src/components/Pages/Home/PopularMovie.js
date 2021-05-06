@@ -1,31 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Carousel from 'react-elastic-carousel';
 
 import '../../../style/PopularMoviePart.scss';
-import {Card} from 'react-bootstrap'
+// import { Card } from 'react-bootstrap'
+
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import { IconButton } from '@material-ui/core';
+
+
 
 const PopularMovie = (props) => {
 
     return (
-        <div className="row">
-         {props.popularMovieListResults.map((movie, id) => (
+        <div className="mainLayout">
 
+            <div className="title">
+                <h2> Popüler Olanlar</h2>
+            </div>
 
-  
+            <div>
+                <Carousel itemsToShow={5}>
+                    {props.popularMovieListResults.map((movie, id) => (
+                        <div key={movie.id}>
+                            <div className="body">
+                                <div><IconButton><MoreHorizIcon /></IconButton></div>
+                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovie-image" />
+                                <div>89% </div>
 
-             
-                <div className="col-lg-4" key={movie.id}>
-                    <div className="card mb-4 shadow-sm">
-                        <div className="card-body">
-                        <img src= {`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovie-image"/>
-                            <h5 className="card-title">{movie.title}</h5>
-                            <div className="d-flex justify-content-between align-items-center">
-                                <h2><span className="badge badge-info">{movie.vote_average}</span></h2>
+                                <div className="con">
+                                    <h4>{movie.title}</h4>
+                                    <h6>{movie.release_date}</h6>
+                                </div>
+
                             </div>
                         </div>
-                    </div>
-                </div>
 
-         ))}
+                    ))}
+                </Carousel>
+            </div>
 
         </div>
     )

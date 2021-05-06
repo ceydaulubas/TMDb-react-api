@@ -4,6 +4,8 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import PopularMovie from './PopularMovie';
 
+require('dotenv').config()
+
 const Home = (props) => {
     const [searchBarInput, setSearchBarInput] = useState("");
     const [popularMovieListResults, setPopularMovieListResults] = useState([]);
@@ -13,12 +15,10 @@ const Home = (props) => {
 
 
     const handleSearchForMovie = () => {
-
-        const API_KEY = "7a4ad99a80b708d7089f9a9a0a0a7ca6";
         // const searchInput = searchBarInput ? searchBarInput : 'love';
 
         axios
-            .get(`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+            .get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
             .then((popularMovieResults) => setPopularMovieListResults(popularMovieResults.data.results))
             .catch((error) => console.error(`Someting went wrong: ${error} in popular movie part`));
 
@@ -36,6 +36,7 @@ const Home = (props) => {
                     null
                 ) :
             <PopularMovie popularMovieListResults={popularMovieListResults}/>
+            
             }
         </div>
     )
