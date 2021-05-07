@@ -30,10 +30,10 @@ const NavBar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/filmler" style={styleForPageLink}>Movies</Nav.Link>
-                    <Nav.Link href="/diziler" style={styleForPageLink}>TV Shows</Nav.Link>
-                    <Nav.Link href="/kisiler" style={styleForPageLink}>People</Nav.Link>
-                    <Nav.Link href="/daha-fazla" style={styleForPageLink}>More</Nav.Link>
+                    <Nav.Link href="/movies" style={styleForPageLink}>Movies</Nav.Link>
+                    <Nav.Link href="/tvshows" style={styleForPageLink}>TV Shows</Nav.Link>
+                    <Nav.Link href="/people" style={styleForPageLink}>People</Nav.Link>
+                    <Nav.Link href="/more" style={styleForPageLink}>More</Nav.Link>
                 </Nav>
 
                 <Nav className="navbar2">

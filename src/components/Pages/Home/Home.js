@@ -5,14 +5,15 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import MovieLists from './MovieLists';
 // import detailOfMovie from './DetailMovie';
-import SearchedMovieList from './SearchedMovieList';
-import { Redirect } from 'react-router';
+// import SearchedMovieList from './SearchedMovieList';
+
 
 require('dotenv').config()
 
 const Home = (props) => {
     const [searchBarInput, setSearchBarInput] = useState("");
-    const [searchedMovieResult, setSearchedMovieResult] = useState([]);
+    // const [searchedMovieResult, setSearchedMovieResult] = useState([]);
+
     const [popularMovieListResults, setPopularMovieListResults] = useState([]);
     const [topRatedMovieListResults, setTopRatedMovieListResults] = useState([]);
     const [detailOfMovie, setDetailOfMovie] = useState({});
@@ -20,14 +21,14 @@ const Home = (props) => {
 
 
     const handleSearchForMovie = () => {
-        const searchInput = searchBarInput
-            ? searchBarInput : 'love';
+        // const searchInput = searchBarInput
+        //     ? searchBarInput : 'love';
 
 
-        axios
-            .get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${searchInput}`)
-            .then((searchedMovie) => setSearchedMovieResult(searchedMovie.data.results))
-            .catch((error) => console.error(`Someting went wrong: ${error} in searchbar part`));
+        // axios
+        //     .get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${searchInput}`)
+        //     .then((searchedMovie) => setSearchedMovieResult(searchedMovie.data.results))
+        //     .catch((error) => console.error(`Someting went wrong: ${error} in searchbar part`));
 
         axios
             .get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`)
@@ -53,10 +54,10 @@ const Home = (props) => {
 
             <SearchBar addSearchInput={handleAddSearchBar} />
 
-            <div>
+            {/* <div>
                 {searchedMovieResult.length >0 ?  (
                     <SearchedMovieList searchedMovieResult={searchedMovieResult} />) : "loading..."}
-            </div>
+            </div> */}
 
 
             {(popularMovieListResults.length === 0) || (topRatedMovieListResults.length === 0) ? (

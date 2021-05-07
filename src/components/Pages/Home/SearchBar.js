@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import '../../../style/SearchBar.scss'
 
 const initialState = { userInput: "" };
@@ -20,6 +22,8 @@ const SearchBar = ({ addSearchInput }) => {
 
     };
 
+    const history = useHistory();
+
 
     return (
         <div className="coverimage">
@@ -38,7 +42,7 @@ const SearchBar = ({ addSearchInput }) => {
                             value={searchState.userInput}
                             onChange={handleInputChange}
                         />
-                        <button type="submit">Search</button>
+                        <button onClick={()=> history.push("/search?query=event.target.value")} type="submit">Search</button>
 
 
                     </form>

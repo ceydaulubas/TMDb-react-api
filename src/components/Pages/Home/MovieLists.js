@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Carousel from 'react-elastic-carousel';
 
-import '../../../style/PopularMoviePart.scss';
-// import { Card } from 'react-bootstrap'
+import '../../../style/MovieList.scss';
 
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { IconButton } from '@material-ui/core';
-
 
 
 const PopularMovie = (props, detailOfMovie) => {
@@ -14,58 +12,63 @@ const PopularMovie = (props, detailOfMovie) => {
     return (
         <div className="mainLayout">
 
-            <div className="title">
-                <h2> What's Popular</h2>
-            </div>
+            {/* POPULAR MOVIE PART */}
+            <div className ="part1">
+                <div className="head">
+                    <h2> What's Popular</h2>
+                </div>
 
-            <div>
-                <Carousel itemsToShow={5}>
-                    {props.popularMovieListResults.map((movie, id) => (
-                        <div key={movie.id}>
-                            <div className="body">
-                                <div><IconButton><MoreHorizIcon /></IconButton></div>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovieImage" />
-                                <div>89% </div>
+                <div className="table">
+                    <Carousel itemsToShow={6}>
+                        {props.popularMovieListResults.map((movie, id) => (
+                            <div key={movie.id}>
+                                <div className="body">
+                                    <div className="shape"><IconButton><MoreHorizIcon /></IconButton></div>
+                                    <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovieImage" />
 
-                                <div className="con">
-                                    <h4>{movie.title}</h4>
-                                    <h6>{movie.release_date}</h6>
+                                <div className="ratioCircle"><p className= "ratioNum">86%</p></div> 
+
+                                    <div className="title">
+                                        <h4>{movie.title}</h4>
+                                        <p>{movie.release_date}</p>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
 
-                    ))}
-                </Carousel>
+                        ))}
+                    </Carousel>
+                </div>
             </div>
 
-
-            <div className="title">
-                <h2> Top Rated</h2>
-            </div>
-
+            {/* TOP RATED MOVIE PART */}
             <div>
-                <Carousel itemsToShow={5}>
-                    {props.topRatedMovieListResults.map((movie, id) => (
-                        <div key={movie.id}>
-                            <div className="body">
-                                <div><IconButton><MoreHorizIcon /></IconButton></div>
-                                <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="popularMovieImage" />
-                                <div>89% </div>
+                <div className="head">
+                    <h2> Top Rated</h2>
+                </div>
 
-                                <div className="con">
-                                    <h4>{movie.title}</h4>
-                                    <h6>{movie.release_date}</h6>
+                <div className="table">
+                    <Carousel itemsToShow={6}>
+                        {props.topRatedMovieListResults.map((movie, id) => (
+                            <div key={movie.id}>
+                                <div className="body">
+                                    <div className="shape"><IconButton><MoreHorizIcon /></IconButton></div>
+                                    <img src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`} alt="topRatedMovieImage" />
+                               
+                                 <div className="ratioCircle"><p className= "ratioNum">86%</p></div> 
+
+                                    <div className="title">
+                                        <h4>{movie.title}</h4>
+                                        <p>{movie.release_date}</p>
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
 
-                    ))}
-                </Carousel>
+                        ))}
+                    </Carousel>
+                </div>
             </div>
-
-
         </div>
     )
 }
