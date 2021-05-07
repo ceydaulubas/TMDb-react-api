@@ -1,7 +1,7 @@
 import React from 'react';
 import ComingSoon from '../../Images/comingSoon.jpg';
 
-const Filmler = () => {
+const Movies = () => {
     return (
         <div>
             <img className= "coming-soon" src={ComingSoon} alt="coming soon" ></img>
@@ -9,4 +9,4 @@ const Filmler = () => {
     )
 }
 
-export default Filmler;
+export default Movies;
