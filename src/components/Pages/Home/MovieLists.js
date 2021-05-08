@@ -7,7 +7,7 @@ import { IconButton } from '@material-ui/core';
 
 import '../../../style/MovieList.scss';
 
-const PopularMovie = (props, detailOfMovie) => {
+const MovieList = (props, detailOfMovie) => {
 
     return (
         <div className="mainLayout">
@@ -74,4 +74,4 @@ const PopularMovie = (props, detailOfMovie) => {
     )
 }
 
-export default PopularMovie;
+export default MovieList;
