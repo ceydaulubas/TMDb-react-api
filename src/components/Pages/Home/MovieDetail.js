@@ -17,7 +17,6 @@ const MovieDetail = (props) => {
     console.log('details', details);
     console.log("props.match.params", props.match.params);
 
-
     const getSingleMovie = () => {
 
         console.log(props.match.params);
@@ -42,8 +41,8 @@ const MovieDetail = (props) => {
                 backgroundImage: `url(${`https://www.themoviedb.org/t/p/w1280/${details.backdrop_path}`}) `,
                 backgroundPosition: 'right -20% top',
                 backgroundRepeat: 'no-repeat',
-            }}
-        >
+            }}>
+
             <div className="transparency">
 
                 <Container>
@@ -54,27 +53,21 @@ const MovieDetail = (props) => {
                         <Col sm={8}>
                             <div className="rightPart">
                                 <h1>{details.title}</h1>
-
-                                   <p>{details.release_date} • {details.runtime}m</p>
-  
-                                
+                                <p>{details.release_date} • {details.runtime}m</p>
                                 <div className="circle">
                                     <p className="ratioNum">{details.vote_average}</p>
                                     <p className="voteAverage">Vote Average</p>
                                     <div>
-                                        <IconButton className="iconCircle"> <ListIcon style={{ color: 'white' }} /></IconButton>
+                                        <IconButton className="iconCircle1"> <ListIcon style={{ color: 'white' }} /></IconButton>
                                         <IconButton className="iconCircle2"> <FavoriteIcon style={{ color: 'white', fontSize: 'small' }} /></IconButton>
                                         <IconButton className="iconCircle3"> <BookmarkIcon className=" bookMark" style={{ color: 'white', fontSize: 'small' }} /></IconButton>
                                         <IconButton className="iconCircle4"> <StarIcon style={{ color: 'white', fontSize: 'small' }} /></IconButton>
                                         <IconButton className="iconCircle5"> <PlayArrowIcon style={{ color: 'white' }} /> <p className="playTitle">Play Trailer</p> </IconButton>
-
-
                                     </div>
                                 </div>
 
                                 <p> {details.name}</p>
-
-                                <p style={{ textTransform: 'capitalize' }}><i>{details.tagline}</i></p>
+                                <p><i>{details.tagline}</i></p>
                                 <h4>Overview</h4>
                                 <p> {details.overview} </p>
                             </div>

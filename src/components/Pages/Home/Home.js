@@ -4,7 +4,6 @@ import axios from 'axios';
 
 import SearchBar from './SearchBar';
 import MovieLists from './MovieLists';
-// import detailOfMovie from './DetailMovie';
 // import SearchedMovieList from './SearchedMovieList';
 
 
@@ -16,9 +15,6 @@ const Home = (props) => {
 
     const [popularMovieListResults, setPopularMovieListResults] = useState([]);
     const [topRatedMovieListResults, setTopRatedMovieListResults] = useState([]);
-    const [detailOfMovie, setDetailOfMovie] = useState({});
-
-
 
     const handleSearchForMovie = () => {
         // const searchInput = searchBarInput
@@ -47,7 +43,6 @@ const Home = (props) => {
     const handleAddSearchBar = (searchInput) =>
         setSearchBarInput(searchInput);
 
-    // const handleDetailOfMovie = (chosenMovie) => setDetailOfMovie(chosenMovie);
 
     return (
         <div>
@@ -66,7 +61,6 @@ const Home = (props) => {
                 <MovieLists
                     popularMovieListResults={popularMovieListResults}
                     topRatedMovieListResults={topRatedMovieListResults}
-                    // detailOfMovie={handleDetailOfMovie}
                      />
 
             }

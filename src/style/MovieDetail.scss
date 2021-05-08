@@ -1,15 +1,16 @@
 .detail {
   color: white;
   width: 100%;
-  background: linear-gradient(to bottom right, rgba(6.27%, 6.67%, 7.06%, 1.00), rgba(6.27%, 6.67%, 7.06%, 0.84));
 
-.transparency{
-    background-image: linear-gradient(to right, rgba(11.76%, 11.37%, 13.73%, 1.00) 150px, rgba(30, 29, 35, 0.733) 100%);
+  .transparency {
+    background-image: linear-gradient(
+      to right,
+      rgba(11.76%, 11.37%, 13.73%, 1) 150px,
+      rgba(30, 29, 35, 0.733) 100%
+    );
     padding-bottom: 2%;
+  }
 }
-
-}
-
 
 .leftPart {
   img {
@@ -23,6 +24,20 @@
 .rightPart {
   margin-top: 8%;
 
+  @media (max-width: 1199px) {
+    margin-left: 5%;
+  }
+  @media (max-width: 992px) {
+
+    h1{
+      font-size: 1.2em;
+    }
+    h4{
+      font-size: 1em;
+    }
+  }
+ 
+
   h1 {
     font-weight: bold;
   }
@@ -33,7 +48,6 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
-
  
     .ratioNum {
       font-size: 1.5em;
@@ -41,37 +55,35 @@
       margin-top: 15%;
       color: white;
     }
-    .voteAverage{
-        font-size: 15px;
-        width: 80px;
-        margin-top: -93%;
-        margin-left: 115%;
-        color: white;
-        font-weight: bold;
-      }
+    .voteAverage {
+      font-size: 15px;
+      width: 80px;
+      margin-top: -93%;
+      margin-left: 115%;
+      color: white;
+      font-weight: bold;
+    }
 
+    // general features for circle icons- they were used in below with @extend method. 
     .iconCircle {
       background-color: #0d253f;
       border-radius: 50%;
       width: 40px;
       height: 40px;
+    }
+    
+    .iconCircle1 {
+      @extend .iconCircle;
       margin-left: 250%;
       margin-top: -208%;
-     
     }
     .iconCircle2 {
-      background-color: #0d253f;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      @extend .iconCircle;
       margin-left: 350%;
       margin-top: -295%;
     }
     .iconCircle3 {
-      background-color: #0d253f;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      @extend .iconCircle;
       margin-left: 450%;
       margin-top: -379%;
 
@@ -81,26 +93,22 @@
     }
 
     .iconCircle4 {
-      background-color: #0d253f;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
+      @extend .iconCircle;
       margin-left: 550%;
       margin-top: -466%;
     }
 
     .iconCircle5 {
-        margin-left: 625%;
-        margin-top: -550%;
+      margin-left: 625%;
+      margin-top: -550%;
 
-        .playTitle{
-            font-size: 15px;
-            width: 80px;
-            margin-top: 13%;
-            color: white;
-            font-weight: bold;
-        }
+      .playTitle {
+        font-size: 15px;
+        width: 80px;
+        margin-top: 13%;
+        color: white;
+        font-weight: bold;
       }
+    }
   }
 }
-

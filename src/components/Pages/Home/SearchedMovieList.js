@@ -21,7 +21,7 @@ const SearchedMovieList = () => {
             .then((searchedMovie) => setSearchedMovieResult(searchedMovie.data.results))
             .catch((error) => console.error(`Someting went wrong: ${error} in searchbar part`));
     };
-    
+
 
     useEffect(handleSearchForMovie, [searchBarInput]);
 
@@ -30,9 +30,9 @@ const SearchedMovieList = () => {
 
     return (
 
-        
+
         <div className="layout">
-<SearchBar addSearchInput={handleAddSearchBar} />
+            <SearchBar addSearchInput={handleAddSearchBar} />
 
             {searchedMovieResult.map((item, id) => (
                 <div key={item.id}>
