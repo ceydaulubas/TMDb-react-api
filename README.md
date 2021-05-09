@@ -1,6 +1,10 @@
 # TMBD Movie 
 
-TMDB is a web page that can find not only some popular movies, top rated movies but also the other kind of movies, types and people's show.
+TMDB is a web page that can help to find not only some popular movies, top-rated movies but also other kinds of movies, tv shows, and detailed information.
+
+<img src="./src/Images/tmdb-main-page.png" width="500" alt="main screen">
+<img src="./src/Images/tmdb-detailed-page.png" width="500" alt="detailed screen">
+<img src="./src/Images/tmdb-searched-page.jpg" width="500" alt="serached movie screen">
 
 ## Tools
 

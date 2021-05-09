@@ -22,7 +22,7 @@ const SearchBar = ({ addSearchInput }) => {
 
     };
 
-    const history = useHistory();
+    // const history = useHistory();
 
 
     return (
@@ -42,7 +42,11 @@ const SearchBar = ({ addSearchInput }) => {
                             value={searchState.userInput}
                             onChange={handleInputChange}
                         />
-                        <button onClick={()=> history.push("/search?query=event.target.value")} type="submit">Search</button>
+                        <button 
+                        // onClick={()=>
+                        //  history.push(`/search/query=${addSearchInput}`)} 
+                        //  type="submit"
+                         >Search</button>
 
 
                     </form>
