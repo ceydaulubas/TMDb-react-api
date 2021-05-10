@@ -21,6 +21,7 @@ I created a folder called Home and created related components inside the Home fo
 When I went to Home file. I had to install Axios (`npm i axios`) for getting TMBD Api. I used two times Axios because I needed the accessing popular and top rated movies data. 
 <br/>
 In the Home file, I added the SearchBar component and MovieList component for showing them on the main page.
+Moreover, while search movie, tv show or person, you will see the list in home page.
 <br/>
 I wanted to show a movie list with a slider and after some research, I learned that I need to use Carousels in the Bootstrap for react js. 
 <br/>
