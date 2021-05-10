@@ -1,10 +1,11 @@
 import React from 'react';
 import ComingSoon from '../../Images/comingSoon.jpg';
+import '../../style/ComingSoon.scss';
 
 const TVshows= () => {
     return (
-        <div>
-            <img className= "coming-soon" src={ComingSoon} alt="coming soon" ></img>
+        <div className="comingSoon">
+            <img src={ComingSoon} alt="coming soon" ></img>
         </div>
     )
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import ComingSoon from '../../Images/comingSoon.jpg';
+import '../../style/ComingSoon.scss';
 
 const More = () => {
     return (
-        <div>
-             <img className= "coming-soon" src={ComingSoon} alt="coming soon" ></img>
-        </div>
+        <div className="comingSoon">
+        <img src={ComingSoon} alt="coming soon" ></img>
+    </div>
     )
 }
 
